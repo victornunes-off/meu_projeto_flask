@@ -1,19 +1,10 @@
-from flask import Flask
+from flask import Flask, render_template
 
-appVictor = Flask(__name__)
+appVictor = Flask(__name__, template_folder= "templates")
 
-@appVictor.route('/')
-@appVictor.route('/rota1')
-def raiz():
-    return 'Olá, professora!'
-
-@appVictor.route('/rota2')
-def rota2():
-    resposta = "<H3> Página da rota 2 <H3>"
-    return resposta
-
-def saudacoes (nome):
-    return f'Olá, {nome}!'
+@appVictor.route("/")  
+def homepage():
+    return render_template ("homepage.html")
 
 if __name__ == '__main__':
-    appVictor.run(port = 8000)
+    appVictor.run(port = 8000, debug = True)
