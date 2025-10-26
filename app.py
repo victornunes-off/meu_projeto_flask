@@ -3,8 +3,9 @@ from flask import Flask, render_template
 appVictor = Flask(__name__, template_folder= "templates")
 
 @appVictor.route("/")  
-def homepage():
-    return render_template ("homepage.html")
+@appVictor.route("/index")  
+def indice():
+    return render_template ("index.html")
 
 @appVictor.route("/contato")
 def contato():
