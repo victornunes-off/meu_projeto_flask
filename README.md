@@ -27,7 +27,6 @@ meu_projeto_flask/<br>
 ├── static/<br>
 │       ├── css/style.css   # Estilos aprimorados<br>
 │       └── js/script.js    # Data/hora e validações<br>
-└── requirements.txt
 
 ---
 
